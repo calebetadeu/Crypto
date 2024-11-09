@@ -2,7 +2,7 @@ package com.example.crypto.crypto_tracker.presentation.models
 
 import androidx.annotation.DrawableRes
 import com.example.crypto.crypto_tracker.domain.Coin
-import com.example.crypto.util.getDrawableIdForCoin
+import com.example.crypto.core.presentation.getDrawableIdForCoin
 import java.text.NumberFormat
 import java.util.Locale
 
