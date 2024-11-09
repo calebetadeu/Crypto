@@ -1,4 +1,4 @@
-package com.example.crypto.util
+package com.example.crypto.core.presentation
 
 import com.example.crypto.R
 
