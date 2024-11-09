@@ -1,5 +1,3 @@
-import org.gradle.api.internal.DocumentationRegistry.BASE_URL
-
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
@@ -21,10 +19,9 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
-
     buildTypes {
         debug {
-            buildConfigField("String", "BASE_URL", "\"${BASE_URL}\"")
+            buildConfigField("String", "BASE_URL", "\"${System.getenv("API_COIN_BASE_URL") ?: "https://default.example.com"}\"")
         }
         release {
             isMinifyEnabled = false
@@ -32,7 +29,7 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-            buildConfigField("String", "BASE_URL", "\"${BASE_URL}\"")
+            buildConfigField("String", "BASE_URL", "\"${System.getenv("API_COIN_BASE_URL") ?: "https://default.example.com"}\"")
         }
     }
     compileOptions {
