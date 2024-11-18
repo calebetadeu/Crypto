@@ -28,7 +28,7 @@ import com.example.crypto.crypto_tracker.presentation.models.toCoinUi
 import com.example.crypto.ui.theme.CryptoTrackerTheme
 
 @Composable
-fun CoinListItem(
+fun  CoinListItem(
     coinUi: CoinUi,
     onClick: () -> Unit,
     modifier: Modifier = Modifier
@@ -101,7 +101,7 @@ internal val previewCoin = Coin(
     rank = 1,
     name = "Bitcoin",
     symbol = "BTC",
-    marketCapUsd = 124323423424234334.75,
+    marketCapUsd = 13234234242344.75,
     priceUsd = 62828.15,
-    changePercent24Hr = -0.1,
+    changePercent24Hr = 0.1,
 ).toCoinUi()

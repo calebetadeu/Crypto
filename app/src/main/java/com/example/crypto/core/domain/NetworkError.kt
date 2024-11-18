@@ -1,4 +1,4 @@
-package com.example.crypto.core.util
+package com.example.crypto.core.domain
 
 enum class NetworkError: Error {
     REQUEST_TIMEOUT,
