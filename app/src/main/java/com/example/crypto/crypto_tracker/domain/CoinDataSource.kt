@@ -1,10 +1,16 @@
 package com.example.crypto.crypto_tracker.domain
 
-import com.example.crypto.core.util.NetworkError
-import com.example.crypto.core.util.Result
+import com.example.crypto.core.domain.NetworkError
+import com.example.crypto.core.domain.Result
+import java.time.ZonedDateTime
 
 
-interface CoinDataSource{
+interface CoinDataSource {
     suspend fun getCoins(): Result<List<Coin>, NetworkError>
+    suspend fun getCoinHistory(
+        coinId: String,
+        start: ZonedDateTime,
+        end: ZonedDateTime
+    ): Result<List<CoinPrice>, NetworkError>
 
 }

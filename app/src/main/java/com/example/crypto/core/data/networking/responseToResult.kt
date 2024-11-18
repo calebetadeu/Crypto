@@ -1,7 +1,7 @@
 package com.example.crypto.core.data.networking
 
-import com.example.crypto.core.util.NetworkError
-import com.example.crypto.core.util.Result
+import com.example.crypto.core.domain.NetworkError
+import com.example.crypto.core.domain.Result
 import io.ktor.client.call.NoTransformationFoundException
 import io.ktor.client.call.body
 import io.ktor.client.statement.HttpResponse
